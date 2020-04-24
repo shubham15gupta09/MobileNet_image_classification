@@ -12,6 +12,6 @@ app.get('/images/truck.jpg',function(req,res) {
     res.sendFile(__dirname + '/images/truck.jpg');   
 })
 
-app.listen(3000 , "localhost" , (req , res)=>{
+app.listen(process.env.PORT || 4000; , "localhost" , (req , res)=>{
     console.log("server started on port 3000");
 });
