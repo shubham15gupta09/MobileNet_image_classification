@@ -1,0 +1,17 @@
+{
+  "name": "tfdeploy",
+  "version": "1.0.0",
+  "description": "Install express and express-fileupload through npm.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "nodemon": "^2.0.3"
+  }
+}
