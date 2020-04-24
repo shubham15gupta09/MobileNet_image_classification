@@ -5,7 +5,7 @@ var upload = require("express-fileupload");
 app.use(upload()); // configure middleware
 
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/index.html");
+  res.sendFile(__dirname + "/routes/index.html");
 });
 
 app.post("/upload", function (req, res) {
@@ -13,16 +13,16 @@ app.post("/upload", function (req, res) {
   if (req.files.upfile) {
     var file = req.files.upfile,
       name = "image.jpg";
-    var uploadpath = __dirname + "/uploads/" + name;
+    var uploadpath = __dirname + "/images/" + name;
     file.mv(uploadpath, function (err) {
       console.log("File Uploaded", name);
-      res.sendFile(__dirname+"/mobilenet.html")
+      res.sendFile(__dirname+"/routes/mobilenet.html")
     });
   }
 });
 
-app.get("/uploads/image.jpg",(req,res)=>{
-  res.sendFile(__dirname+"/uploads/image.jpg")
+app.get("/images/image.jpg",(req,res)=>{
+  res.sendFile(__dirname+"/images/image.jpg")
 });
 
 app.listen(3000 , (req,res)=>{
