@@ -20,3 +20,5 @@ Checkout more about mobilenet here :  https://github.com/tensorflow/tfjs-models/
 3 . Install Nodejs <br>
 4 . clone this project  and * cd imgClassify * <br>
 5 . npm start
+<br><br>
+Note you have to change the src for the image accordingly  src="http://34.66.124.224/images/image.jpg"
