@@ -25,6 +25,7 @@ app.get("/images/image.jpg",(req,res)=>{
   res.sendFile(__dirname+"/images/image.jpg")
 });
 
-app.listen(3000 , (req,res)=>{
+const PORT = process.env.PORT || 8080;
+app.listen(PORT , (req,res)=>{
   console.log("server started on port : 3000");
 });
