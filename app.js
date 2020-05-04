@@ -25,15 +25,6 @@ app.post("/upload", function (req, res) {
     });
   }
 });
-app.get("/model.json" , function(req,res){
-  console.log(req.files);
-  res.sendFile(__dirname + "/tf_modelfile/model.json");
-});
-
-app.get("/group1-shard1of1.bin" , function(req,res){
-  console.log(req.files);
-  res.sendFile(__dirname + "/tf_modelfile/group1-shard1of1.bin");
-});
 
 app.get("/images/image.jpg",(req,res)=>{
   res.sendFile(__dirname+"/images/image.jpg")

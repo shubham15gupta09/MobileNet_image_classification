@@ -3,22 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>R P C Game</title>
+    <title>ML on web</title>
   </head>
-  <body style="text-align: center;">
-    <h1 style="font-weight: bold;">Welcome to the RPC Game </h1>
-    <h2 style="color:blueviolet;">This Project uses a image classification Model made using Tensorflow . 
-      The model is coded in python and then converted using the Keras save_model converter (An API present in the 
-      Tensorflow JS )</h2>
-    <h3 >This model wil show you whether your uploaded image is a Rock or a Paper or a 
-      Scissor </h3>
-    <h3 >Upload Image</h3>
+  <body style="background-color: black;margin: 20px;font-family: cursive;">
+    <h1 style="color:yellow; font-weight: bold;">Welcome to the online Image classifier </h1>
+    <h2 style="color:chartreuse">This Project uses Tensorflow js to build and inference the model . 
+        Note that we are using the very famous MobileNET model</h3>
+    <h3 style="color: aliceblue;">This model wil show you the Class as well as the probability</h3>
+    <p>please note when you click submit, you will be redirected to a new page </p>
+    <h1>Upload Image</h1>
     <form class="fileupload" action="upload" method="post" enctype="multipart/form-data">
-      <input type="file" name="upfile" value="">
-      <br><br>
+      <input type="file" name="upfile" value="" style="color: aliceblue;">
       <input type="submit" />
     </form>
-    <p>Please note when you click submit, you will be redirected to a new page. <br>
-      I don't care your Privacy hence I will be saving your photo to retrain the model for increasing the accuracy</p>
   </body>
 </html>

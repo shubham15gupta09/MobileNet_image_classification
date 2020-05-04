@@ -1,33 +1,24 @@
-Want to contribute ?? :\ <br>
-Welcome !!! :)<br>
-Just fork this repo and start working . Check the Requirements below <br>
-Waiting for your PR
-## Timeline : 
-May 5th 20 , 11.59 pm IST
-## Progress :
-<ul>
-  <li>ML Model : Done</li>
-  <li>Tensorflow js conversion : Done</li>
-  <li>Basic Web Page : Done</li>
-  <li>Prediction on test images : Working (Done)</li>
-</ul>
-
-# RPC_Game :
-A rock paper scissor game on web
-## Requirements :
-1 . ML Model
-<ul>
-  <li>1 . To develope a Machine Learning algorithm to classify and detect the rock paper and scissor hand gestures</li>
-  <li>2 . Model conversion so that we can use it for tensorflow js </li>
-</ul>
-2 . Web App
-<ul>
-  <li>1 . Front -End :  UI for the Web Game ( It should contain a DIV which can render live damera feed so that a frame can be craptured for playing the game) </li>
-  <li>2 . Back-End : for Routes and integrating the Tensorflow JS </li>
-</ul>
-3 . Deployment
-<ul>
-  <li>1 . localhost:8000 </li>
-  <li>2 . Virtual Machine ( weither in GCloud or Azure )</li>
-  <li>3 . Docker Image</li>
-</ul>
+# imgClassify
+Its a Web App for classifying Images . <br>
+Upload your Image and We will tell you the class and probability 
+# Tech Used
+1 . Tensorflow js<br>
+2 . JavaScript<br>
+3 . HTML , CSS<br>
+4 . NodeJs , Express , Express-fileupload <br>
+# Model Used : MobileNet
+Checkout more about mobilenet here :  https://github.com/tensorflow/tfjs-models/tree/master/mobilenet
+# How to use ?
+## Using LocalHost <br>
+1 . clone this project <br>
+2 . npm install<br>
+3 . npm start<br>
+4 . Just upload a photo by using the upload button and that's it !! You are good to go.<br>
+## Using Virtual Machine <br>
+1 . Create a VM on Google cloud / Azure  (os = linux) <br> 
+2 . Open the SSH terminal <br>
+3 . Install Nodejs <br>
+4 . clone this project  and * cd imgClassify * <br>
+5 . npm start
+<br><br>
+Note you have to change the src for the image accordingly 
