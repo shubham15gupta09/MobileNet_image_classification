@@ -1,25 +1,82 @@
 <html>
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"></script>
+    <link rel="shortcut icon" href="#" /> <!-- to fix the favicon.ico error in console log -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
 </head>
-<body style="background-color: black;margin: 20px;font-family: cursive;color: aliceblue;">
-    <h3 style="font-family: cursive;color: yellow;" >Result : </h3>
-  <!--  <img id="img" src="http://34.66.124.224/images/image.jpg" style="width: 50%;height:50%;"></img><br>-->
-    <img id="img" src="http://localhost:3000/images/image.jpg" style="width: 50%;height:50%;"></img><br>
-    <div id="output" style="font-family:courier;font-size:24px;height:300px"></div>
+
+<body>
+    <h3>Hold Down !!! <br>Processing Results . . . . </h3>
+    <img id="img1" src="http://localhost:3000/images/image.jpg" style="width: 50%;height:50%;"></img><br>
+    <br>
+    <div id="output1" style="font-size:24px;"></div>
+    <br>
+    <div id="res_out" style="font-size:24px;"></div>
 </body>
 <script>
-    const img = document.getElementById('img');
-    const outp = document.getElementById('output');
-    mobilenet.load().then(model => {
-        model.classify(img).then(predictions => {
-            console.log(predictions);
-            for (var i = 0; i < predictions.length; i++) {
-                outp.innerHTML += "Class :  " + predictions[i].className +"<br/>"
-                + "Probability : " + (predictions[i].probability*100).toFixed(3)+" %"+"<br/>";
-            }
-        });
-    });
+    async function run() {
+        function naming (x){
+            if (x[0]===1)
+                return "Paper";
+            if (x[1]===1)
+                return "Rock";
+            if (x[2]===1)
+                return "Scissor";            
+        }
+        function naming_res (x){
+            if (x===0)
+                return "Paper";
+            else if (x===1)
+                return "Rock";
+            else if (x===2)
+                return "Scissor";   
+            else 
+                return "Scissor";         
+        }
+        const convertTEnsor = (x)=>{
+            return tf.browser.fromPixels(x).resizeNearestNeighbor([150, 150]).toFloat().expandDims();
+        }
+
+        const url_model = 'http://localhost:3000/model.json';
+        const model = await tf.loadLayersModel(url_model);
+        console.log(model.summary());
+
+        const img1 = document.getElementById('img1');
+        let tensor1 = convertTEnsor(img1);
+
+        let pred1 = await model.predict(tensor1).data();
+        const outp1 = document.getElementById('output1');
+        outp1.innerHTML += naming(pred1) ;
+
+        const ran_no = int(Math.random()*2);
+        const res = naming_res(ran_no) ;
+        const outp2 = document.getElementById('res_out');
+        if (res === pred1 ) {
+            outp2.innerHTML += "Draw" ;
+        }
+        else if (res ==="Paper" && pred1==="Rock"){
+            outp2.innerHTML += "You Win" ;
+        }
+        else if (res ==="Rock" && pred1==="Paper"){
+            outp2.innerHTML += "You Lose" ;
+        }
+        else if (res ==="Paper" && pred1==="Scissor"){
+            outp2.innerHTML += "You Lose" ;
+        }
+        else if (res ==="Scissor" && pred1==="Paper"){
+            outp2.innerHTML += "You Win" ;
+        }
+        else if (res ==="Scissor" && pred1==="Rock"){
+            outp2.innerHTML += "You Win" ;
+        }
+        else if (res ==="Rock" && pred1==="Scissor"){
+            outp2.innerHTML += "You Lose" ;
+        }
+        else{
+            outp2.innerHTML += "I am Sorry My Model failed to recognize what you uploaded" ;
+        }
+    }
+    run();
 </script>
+</body>
 </html>
