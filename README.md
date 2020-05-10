@@ -1,3 +1,6 @@
+# Deployed using Azure App wervices :
+https://oneimgclassify.azurewebsites.net/
+
 # imgClassify
 Its a Web App for classifying Images . <br>
 Upload your Image and We will tell you the class and probability 
