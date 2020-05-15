@@ -34,6 +34,6 @@ Checkout more about mobilenet here :  https://github.com/tensorflow/tfjs-models/
 3 . Install Nodejs <br>
 4 . clone this project  and * cd imgClassify * <br>
 5 . npm start
-<br>Note</b> Now tested on Azure , Google Cloud and AWS 
+<b>Note</b> Now tested on Azure , Google Cloud and AWS 
 <br><br>
-<br>Note</b> you have to change the src for the image accordingly 
+<b>Note</b> you have to change the src for the image accordingly 
