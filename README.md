@@ -18,8 +18,8 @@ Checkout more about mobilenet here :  https://github.com/tensorflow/tfjs-models/
 3 . npm start<br>
 4 . Just upload a photo by using the upload button and that's it !! You are good to go.<br>
 ## Using Virtual Machine <br>
-1 . Create a VM on Google cloud / Azure  (os = linux) <br> 
-2 . Open the SSH terminal <br>
+1 . Create a VM on Google cloud / Azure  (No cloud war : peace) <br> 
+2 . Open the SSH terminal ( you may have to use an external client like PuTTy for SSH)<br>
 3 . Install Nodejs <br>
 4 . clone this project  and * cd imgClassify * <br>
 5 . npm start
