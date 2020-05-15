@@ -33,7 +33,7 @@ Checkout more about mobilenet here :  https://github.com/tensorflow/tfjs-models/
 2 . Open the SSH terminal ( you may have to use an external client like PuTTy for SSH)<br>
 3 . Install Nodejs <br>
 4 . clone this project  and * cd imgClassify * <br>
-5 . npm start
+5 . npm start <br>
 <b>Note</b> Now tested on Azure , Google Cloud and AWS 
 <br><br>
 <b>Note</b> you have to change the src for the image accordingly 
