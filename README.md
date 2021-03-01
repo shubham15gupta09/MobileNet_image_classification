@@ -3,10 +3,9 @@
 
 # Tech Used
 
-1 . Tensorflow , Tensorflow js , Pre-Trained Models<br>
-2 . JavaScript<br>
-3 . HTML , CSS<br>
-4 . NodeJs , Express <br>
+1 . Tensorflow js (Pre-Trained Model) <br>
+2 . Js , html , CSS <br>
+3 . Node Js and Express <br>
 
 # Model Used : MobileNet
 
@@ -28,7 +27,7 @@ Checkout more about mobilenet here :  https://github.com/tensorflow/tfjs-models/
 3 . Install Nodejs <br>
 4 . clone this project  and * cd imgClassify * <br>
 5 . npm start <br>
-<b>Note</b> Now tested on Azure , Google Cloud and AWS 
+<b>Note : </b> Now tested on Azure and Google Cloud.
 
 <br><br>
 <b>Note</b> you have to change the src for the image accordingly 
