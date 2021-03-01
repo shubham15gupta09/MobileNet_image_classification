@@ -1,5 +1,5 @@
 # MobileNet_image_classification
-<p> This NodeJs project demonstrate Image Classification using Mobile Net </p>
+<p>This NodeJs project demonstrates Image Classification using Mobile Net</p>
 
 # Tech Used
 
