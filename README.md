@@ -1,11 +1,5 @@
-# Deployed using Azure App wervices :
-
-https://oneimgclassify.azurewebsites.net/ 
-<p> Might not be working as I can only have 1 free deployment . and now working on New Project </p>
-
-# imgClassify
-Its a Web App for classifying Images . <br>
-Upload your Image and We will tell you the class and probability 
+# MobileNet_image_classification
+<p> This NodeJs project demonstrate Image Classification using Mobile Net </p>
 
 # Tech Used
 
@@ -35,5 +29,6 @@ Checkout more about mobilenet here :  https://github.com/tensorflow/tfjs-models/
 4 . clone this project  and * cd imgClassify * <br>
 5 . npm start <br>
 <b>Note</b> Now tested on Azure , Google Cloud and AWS 
+
 <br><br>
 <b>Note</b> you have to change the src for the image accordingly 
